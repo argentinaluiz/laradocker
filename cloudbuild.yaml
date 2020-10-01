@@ -21,7 +21,7 @@ steps:
 
   - id: "Rodando migrations"
     name: 'docker'
-    args: ['exec','-t','app','php','/var/www/artisan','migrate']
+    args: ['exec','-u','root','-t','app','php','/var/www/artisan','migrate']
 
   - id: "Rodando phpunit"
     name: 'docker'
